@@ -1,0 +1,48 @@
+<footer class="page-footer grey darken-4 white-text">
+	<div class="text">
+			<div class="built">
+				Site built with <a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using 
+				<a href="http://github.com/dokel/material-conspectus" target="_blank">Material-Conspectus</a>
+				theme
+			</div>
+			<div class="copyright">
+				<span
+				{{ if .Site.Params.isCopyleft }}
+				style="
+					-webkit-transform: scaleX(-1);
+					-moz-transform: scaleX(-1);
+					-o-transform: scaleX(-1);
+					-khtml-transform: scaleX(-1);
+					-ms-transform: scaleX(-1);
+					transform: scaleX(-1);
+					display: inline-block;
+				"
+				{{ end }}
+				>
+					&copy;
+				</span>
+				{{ now.Format "2006" }}  {{ .Site.Params.copyright }}
+			</div>
+		</div>
+		<div class="contacts">
+               {{ if or .Site.Social.vk .Site.Social.email .Site.Social.github}}
+			<h5 class="white-text">Контакты</h5>
+				{{ with .Site.Social.vk }}
+					<a href="https://vk.com/{{ . }}" target="_blank" title="ВКонтакте" style="border-bottom:none;">
+						<i class="fa fa-vk fa-2x" aria-hidden="true"></i>
+					</a>
+				{{ end }}
+					{{ with .Site.Social.github }}
+					<a href="https://github.com/{{ . }}" target="_blank" title="GitHub" style="border-bottom:none;">
+							<i class="fa fa-github fa-2x" aria-hidden="true"></i>
+					</a>
+				{{ end }}
+					{{ with .Site.Social.email }}
+					<a href="mailto:{{ . }}" title="Email of {{ . }}" style="border-bottom:none;">
+						<i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+					</a>
+				{{ end }}
+				{{ end }}
+		</div>
+</footer>

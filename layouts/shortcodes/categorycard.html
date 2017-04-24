@@ -1,0 +1,12 @@
+<a href="{{ .Get "url" | absURL }}" class="nostyle">
+<div class="card z-depth-4 category">
+	<div class='mask'></div>
+	<div class="card-image">
+		<img src="{{ .Get "imgsrc" }}">
+		<span class="card-title">{{ .Get "title" }}</span>
+	</div>
+	<div class="card-content">
+		<p> {{ .Inner }} </p>
+	</div>
+</div>
+</a>

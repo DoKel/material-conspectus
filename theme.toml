@@ -1,0 +1,12 @@
+name = "Material Conspectus"
+license = "MPL v2"
+licenselink = "https://github.com/dokel/material-conspectus/blob/master/LICENSE.md"
+description = "Hugo theme for lecture writings"
+homepage = "https://github.com/dokel/material-conspectus"
+tags = []
+features = []
+min_version = "0.20"
+
+[author]
+  name = "dokel"
+  homepage = "https://github.com/dokel"

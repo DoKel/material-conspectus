@@ -1,0 +1,39 @@
+<head>
+
+    <title>{{ .Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }}</title>
+
+	{{ .Hugo.Generator }}
+
+	<!-- Some meta info -->
+		<meta charset="utf-8">
+
+		{{ with .Site.Params.description }}
+		<meta name="description" content="{{ . }}">
+		{{ end }}
+		<link rel="canonical" href="{{ .Permalink }}">
+		{{ with .Site.Params.author }}
+		<meta name="author" content="{{ . }}">
+		{{ end }}
+
+
+	<!-- Fonts -->
+		  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet"> 
+
+	<!-- Font Awesome -->
+		<link rel="stylesheet" href="{{ "fontawesome/css/font-awesome.min.css" | absURL }}">
+
+	<!-- MaterializeCSS framework -->
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="{{ "css/materialize.min.css" | absURL }}/">
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="{{ "js/materialize.min.js" | absURL }}"></script>          
+
+	<!-- Icon -->
+		<link rel="shortcut icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
+		<link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
+
+	<!-- CSS -->
+		<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
+
+</head>
