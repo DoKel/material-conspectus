@@ -33,6 +33,11 @@
 		<!-- Compiled and minified JavaScript -->
 		<script src="{{ "js/materialize.min.js" | absURL }}"></script>          
 
+	<!-- Emoji -->
+	{{ if .Site.Params.emoji }}
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	{{ end }}
+
 	<!-- Icon -->
 		<link rel="shortcut icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
 		<link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">

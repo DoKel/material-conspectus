@@ -3,7 +3,7 @@
 {{ partial "header" . }}
 
 <div class="card-panel grey lighten-2 description">
-{{ .Site.Params.description }}
+{{ .Site.Params.description | markdownify }}
 </div>
 
 <article class="main">
