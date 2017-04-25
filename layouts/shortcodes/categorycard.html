@@ -2,7 +2,7 @@
 <div class="card z-depth-4 category">
 	<div class='mask'></div>
 	<div class="card-image">
-		<img src="{{ .Get "imgsrc" }}">
+		<img src="{{ .Get "imgsrc" | absURL }}">
 		<span class="card-title">{{ .Get "title" }}</span>
 	</div>
 	<div class="card-content">

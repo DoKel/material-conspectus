@@ -1,0 +1,28 @@
+{{ partial "head" . }}
+
+{{ partial "header" . }}
+
+<nav>
+    <div class="nav-wrapper grey darken-4">
+      <div class="col s12">
+        <a href="{{ $.Site.BaseURL }}" class="breadcrumb nostyle">Главная страница</a>
+        <a href="#" class="breadcrumb nostyle">{{ .Page.Title }}</a>
+      </div>
+    </div>
+  </nav>
+
+{{ if .Params.description }}
+	<div class="card-panel grey lighten-2 description">
+		{{ .Params.description }}
+	</div>
+{{ end }}
+
+<article class="main">
+
+	<div class="card-panel z-depth-0">
+		{{ .Content }}
+	</div>
+
+</article>
+
+{{ partial "footer" . }}

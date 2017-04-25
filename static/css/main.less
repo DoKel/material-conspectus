@@ -2,6 +2,11 @@ html{
 	font-size: 15px;
 }
 @h1-size: 2rem;
+@h2-size: 3.15rem;
+@h3-size: @h2-size*0.8;
+@h4-size: @h2-size*0.7;
+@h5-size: @h2-size*0.6;
+
 
 
 h1, h2, h3, h4, h5, .card-title {
@@ -9,14 +14,41 @@ h1, h2, h3, h4, h5, .card-title {
 	margin: 0;
 }
 
+h1 {
+		font-size: @h1-size;
+		height:  @h1-size*1.3;
+		line-height:  @h1-size*1.3;
+}
+
 h2 {
-	font-size: 1.7rem;
+		font-size: @h2-size;
+		height:  @h2-size*1.3;
+		line-height:  @h2-size*1.3;
+}
+
+h3 {
+		font-size: @h3-size;
+		height:  @h3-size*1.3;
+		line-height:  @h3-size*1.3;
+}
+
+h4 {
+		font-size: @h4-size;
+		height:  @h4-size*1.3;
+		line-height:  @h4-size*1.3;
+}
+
+h5 {
+		font-size: @h5-size;
+		height:  @h5-size*1.3;
+		line-height:  @h5-size*1.3;
 }
 
 
 
 #header{
 	display: flex;
+	margin-bottom: 5px;
 
 	.logo{
 		display: flex;
@@ -38,10 +70,6 @@ h2 {
 		width: 90%;
 
 		h1{
-
-			font-size: @h1-size;
-			height:  @h1-size*1.3;
-			line-height:  @h1-size*1.3;
 			text-align: center;
 			margin: auto;
 		}
@@ -72,6 +100,15 @@ a.nostyle, a.nostyle:hover{
 }
 
 
+a.breadcrumb{
+	margin-left: 20px;
+	margin-right: 0px;
+}
+
+a.breadcrumb::before{
+	margin-right: 20px;
+}
+
 .category_container{
 	width: 100%;
 	display: flex;
@@ -88,13 +125,48 @@ a.nostyle, a.nostyle:hover{
 		position: absolute;
 		width: 100%;
 		height: 0%;
-		z-index: 10;
+		z-index: 2;
 		transition-duration: 0.2s;
+		cursor: pointer;
 	}
 
 	.card-title{
+		font-size: @h2-size/2.1;
 		background: rgba(0,0,0,0.7);
 		border-radius: 10px; /* Радиус скругления */
+	}
+
+	.card-reveal{
+		form{
+			padding-top: 10px;
+			text-align: center;
+		}
+
+		.btn{
+			display: inline-flex;
+			width: auto;
+		}
+
+		.btn-name{
+			word-wrap: normal;
+			height: 100%;
+		}
+
+		.btn-icon-wrap{
+			padding-left: 5%;
+			padding-right: 5%;
+			height: 90%;
+		}
+
+		.icon{
+			height:100%;
+		}
+
+		.disabled{
+			.icon{
+				opacity: 0.4;
+			}
+		}
 	}
 }
 

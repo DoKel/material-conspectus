@@ -1,0 +1,64 @@
+<div class="card z-depth-4 category">
+	<div class='mask activator'></div>
+	<div class="card-image">
+		<img src="{{ .Get "imgsrc" | absURL }}">
+		<span class="card-title">{{ .Get "title" }}</span>
+	</div>
+	<div class="card-content">
+		<p> {{ .Inner }} </p>
+	</div>
+	<div class="card-reveal">
+	  <span class="card-title grey-text text-darken-4 white">{{ .Get "title" }}<i class="material-icons right">close</i></span>
+		
+		<!-- TODO: add some subtitle -->
+		
+		{{ if .Get "stage1" }}
+			<form action="{{ .Get "st1url" | absURL }}">
+			<button class="btn grey darken-4 {{ if .Get "st1url" }}{{ else }}disabled{{ end }}" type="submit" name="action">
+				<div class="btn-name">
+					{{ .Get "stage1" | markdownify }}
+				</div>
+				<div class="btn-icon-wrap">
+					<img class="icon" src="/images/icons/stage1.png">
+				</div>
+			</button>
+			</form>
+		{{ end }}
+		{{ if .Get "stage2" }}
+			<form action="{{ .Get "st2url" | absURL }}">
+			<button class="btn grey darken-4 {{ if .Get "st2url" }}{{ else }}disabled{{ end }}" type="submit" name="action">
+				<div class="btn-name">
+					{{ .Get "stage2" | markdownify }}
+				</div>
+				<div class="btn-icon-wrap">
+					<img class="icon" src="/images/icons/stage2.png">
+				</div>
+			</button>
+			</form>
+		{{ end }}	
+		{{ if .Get "stage3" }}
+			<form action="{{ .Get "st3url" | absURL }}">
+			<button class="btn grey darken-4 {{ if .Get "st3url" }}{{ else }}disabled{{ end }}" type="submit" name="action">
+				<div class="btn-name">
+					{{ .Get "stage3" | markdownify }}
+				</div>
+				<div class="btn-icon-wrap">
+					<img class="icon" src="/images/icons/stage3.png">
+				</div>
+			</button>
+			</form>
+		{{ end }}
+		{{ if .Get "stage4" }}
+			<form action="{{ .Get "st4url" | absURL }}">
+			<button class="btn grey darken-4 {{ if .Get "st4url" }}{{ else }}disabled{{ end }}" type="submit" name="action">
+				<div class="btn-name">
+					{{ .Get "stage4" | markdownify }}
+				</div>
+				<div class="btn-icon-wrap">
+					<img class="icon" src="/images/icons/stage4.png">
+				</div>
+			</button>
+			</form>
+		{{ end }}			
+	</div>
+</div>

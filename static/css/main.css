@@ -10,11 +10,34 @@ h5,
   font-family: Lora, serif;
   margin: 0;
 }
+h1 {
+  font-size: 2rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+}
 h2 {
-  font-size: 1.7rem;
+  font-size: 3.15rem;
+  height: 4.095rem;
+  line-height: 4.095rem;
+}
+h3 {
+  font-size: 2.52rem;
+  height: 3.276rem;
+  line-height: 3.276rem;
+}
+h4 {
+  font-size: 2.205rem;
+  height: 2.8665rem;
+  line-height: 2.8665rem;
+}
+h5 {
+  font-size: 1.89rem;
+  height: 2.457rem;
+  line-height: 2.457rem;
 }
 #header {
   display: flex;
+  margin-bottom: 5px;
 }
 #header .logo {
   display: flex;
@@ -37,9 +60,6 @@ h2 {
   width: 90%;
 }
 #header .name h1 {
-  font-size: 2rem;
-  height: 2.6rem;
-  line-height: 2.6rem;
   text-align: center;
   margin: auto;
 }
@@ -63,6 +83,13 @@ a.nostyle:hover {
   text-decoration: none;
   color: inherit;
 }
+a.breadcrumb {
+  margin-left: 20px;
+  margin-right: 0px;
+}
+a.breadcrumb::before {
+  margin-right: 20px;
+}
 .category_container {
   width: 100%;
   display: flex;
@@ -78,13 +105,38 @@ a.nostyle:hover {
   position: absolute;
   width: 100%;
   height: 0%;
-  z-index: 10;
+  z-index: 2;
   transition-duration: 0.2s;
+  cursor: pointer;
 }
 .category .card-title {
+  font-size: 1.5rem;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   /* Радиус скругления */
+}
+.category .card-reveal form {
+  padding-top: 10px;
+  text-align: center;
+}
+.category .card-reveal .btn {
+  display: inline-flex;
+  width: auto;
+}
+.category .card-reveal .btn-name {
+  word-wrap: normal;
+  height: 100%;
+}
+.category .card-reveal .btn-icon-wrap {
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 90%;
+}
+.category .card-reveal .icon {
+  height: 100%;
+}
+.category .card-reveal .disabled .icon {
+  opacity: 0.4;
 }
 .category:hover .mask {
   height: 100%;

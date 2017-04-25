@@ -1,4 +1,9 @@
+<a href="{{ $.Site.BaseURL }}" class="nostyle">
 <nav class="grey darken-4" id="header">
-<div class="logo"><img src="{{ .Site.Params.logo }}" id="logo"></div>
+	<div class="logo">
+		<img src="{{ $.Site.BaseURL }}{{ .Site.Params.logo }}" id="logo">
+	</div>
+
 <div class="name"><h1>{{ .Site.Title}}</h1></div>
 </nav>
+</a>
